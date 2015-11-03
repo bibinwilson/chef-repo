@@ -1,9 +1,15 @@
 require 'spec_helper'
 
 describe 'webserver::default' do
-  # Serverspec examples can be found at
-  # http://serverspec.org/resource_types.html
-  it 'does something' do
-    skip 'Replace this with meaningful tests'
+
+  it 'displays the home page' do
+    expect(command("wget http://localhost").exit_status).to eq 0
   end
+  
+  it "it installs apache" do
+    expect(package apache2).to be_installed
+  end
+
 end
+
+

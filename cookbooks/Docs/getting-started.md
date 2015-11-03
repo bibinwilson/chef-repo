@@ -104,11 +104,70 @@ To launch the vm for our cookbook testing, just execute the following command. I
 </pre>
 </code>
 
-So the above one command could launch as many VM's you want based on the kitchen configuration. 
+So the above one command could launch as many VM's you want based on the kitchen configuration. One the Vm is created , you can run "kitchen list" comand to check the created status.
 
 It will take a while to lauch the test vagrant VM. Once launched, you will have your test VM ready for integration testing.
 
 <h3>Writing Integration Tests</h3>
+
+When we generated the cookbook using chefdk, it automaticlly create alll the necessary test files. You can see a test folder will the following tree structure.
+
+<code language="ruby">
+<pre>└── test
+    └── integration
+        ├── default
+        │   └── serverspec
+        │       └── default_spec.rb
+        └── helpers
+            └── serverspec
+                └── spec_helper.rb
+</pre>
+</code>
+
+We will write all the tests in serverspec. Serverspec is build on top of ruby test framework rspec.
+
+If you open default_spec.rb file, you will see the default skeleton for our web server cookbook. Explaining serverpsec is out of scope of this article. Visit http://serverspec.org/resource_types.html for more deatils on server spec.
+
+So our first test case is to test if the webserver is present in the server or not. The test block looks like the following.
+
+<pre>
+<code language="ruby">require 'spec_helper'
+
+describe 'webserver::default' do
+
+  it 'displays the home page' do
+    expect(command("wget http://localhost").exit_status).to eq 0
+  end
+end
+</code>
+</pre>
+
+Basically, the above code runs the curl command to localhost and equates the exit status to 0. If the exit status is 0, web server is present in the server. 
+
+This test should fail for us, because, we haven't configured the web server yet.
+
+Lets try running this failing test using test kitchen.
+
+Execute the following command from webserver cookbook directory to set up chef-client and run our webserver cookbook on our test kitchen node we created earlier.
+
+<pre>
+<code language="ruby">kitchen converge
+</code>
+</pre>
+
+The above command will return a successfull chef client run because our webserver cookbook dont have any resources as of now.
+
+Now, lets run our failing test using the following command. It will install all the necessary server spec gem to run the tests.
+
+<pre>
+<code language="ruby">kitchen verify
+</code>
+</pre>
+
+
+
+
+
 
 
 

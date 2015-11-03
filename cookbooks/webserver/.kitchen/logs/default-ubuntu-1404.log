@@ -1,10 +1,84 @@
-I, [2015-11-03T12:41:29.280294 #1270]  INFO -- default-ubuntu-1404: -----> Creating <default-ubuntu-1404>...
-I, [2015-11-03T12:41:29.286605 #1270]  INFO -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/mixlib-shellout-2.2.1/lib/mixlib/shellout/unix.rb:338: warning: Insecure world writable dir /usr/local in PATH, mode 040777
-I, [2015-11-03T12:41:29.440344 #1270]  INFO -- default-ubuntu-1404: /opt/vagrant/bin/../embedded/gems/gems/vagrant-1.7.2/lib/vagrant/pre-rubygems.rb:31: warning: Insecure world writable dir /usr/local in PATH, mode 040777
-I, [2015-11-03T12:41:29.761658 #1270]  INFO -- default-ubuntu-1404: /opt/vagrant/embedded/gems/gems/bundler-1.7.11/lib/bundler/runtime.rb:222: warning: Insecure world writable dir /usr/local in PATH, mode 040777
-I, [2015-11-03T12:41:30.388496 #1270]  INFO -- default-ubuntu-1404: Bringing machine 'default' up with 'virtualbox' provider...
-I, [2015-11-03T12:41:30.549603 #1270]  INFO -- default-ubuntu-1404: ==> default: Box 'opscode-ubuntu-14.04' could not be found. Attempting to find and install...
-I, [2015-11-03T12:41:30.549751 #1270]  INFO -- default-ubuntu-1404:     default: Box Provider: virtualbox
-I, [2015-11-03T12:41:30.549873 #1270]  INFO -- default-ubuntu-1404:     default: Box Version: >= 0
-I, [2015-11-03T12:41:34.575999 #1270]  INFO -- default-ubuntu-1404: ==> default: Adding box 'opscode-ubuntu-14.04' (v0) for provider: virtualbox
-I, [2015-11-03T12:41:34.581614 #1270]  INFO -- default-ubuntu-1404:     default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box
+I, [2015-11-03T13:50:52.201300 #1899]  INFO -- default-ubuntu-1404: -----> Verifying <default-ubuntu-1404>...
+I, [2015-11-03T13:50:52.201756 #1899]  INFO -- default-ubuntu-1404: Preparing files for transfer
+I, [2015-11-03T13:50:52.423368 #1899]  INFO -- default-ubuntu-1404: -----> Busser installation detected (busser)
+I, [2015-11-03T13:50:52.423627 #1899]  INFO -- default-ubuntu-1404: Installing Busser plugins: busser-serverspec
+I, [2015-11-03T13:51:08.332751 #1899]  INFO -- default-ubuntu-1404: Plugin serverspec already installed
+I, [2015-11-03T13:51:08.528545 #1899]  INFO -- default-ubuntu-1404: Removing /tmp/verifier/suites/serverspec
+I, [2015-11-03T13:51:08.536482 #1899]  INFO -- default-ubuntu-1404: Transferring files to <default-ubuntu-1404>
+I, [2015-11-03T13:51:08.733864 #1899]  INFO -- default-ubuntu-1404: -----> Running serverspec test suite
+I, [2015-11-03T13:51:08.801901 #1899]  INFO -- default-ubuntu-1404: /opt/chef/embedded/bin/ruby -I/tmp/verifier/suites/serverspec -I/tmp/verifier/gems/gems/rspec-support-3.3.0/lib:/tmp/verifier/gems/gems/rspec-core-3.3.2/lib /opt/chef/embedded/bin/rspec --pattern /tmp/verifier/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/verifier/suites/serverspec
+I, [2015-11-03T13:51:09.108984 #1899]  INFO -- default-ubuntu-1404: 
+I, [2015-11-03T13:51:09.109369 #1899]  INFO -- default-ubuntu-1404: webserver::default
+I, [2015-11-03T13:51:09.198894 #1899]  INFO -- default-ubuntu-1404: [31m  displays the home page (FAILED - 1)[0m
+I, [2015-11-03T13:51:09.199539 #1899]  INFO -- default-ubuntu-1404: [31m  it installs apache (FAILED - 2)[0m
+I, [2015-11-03T13:51:09.200637 #1899]  INFO -- default-ubuntu-1404: 
+I, [2015-11-03T13:51:09.200951 #1899]  INFO -- default-ubuntu-1404: Failures:
+I, [2015-11-03T13:51:09.201079 #1899]  INFO -- default-ubuntu-1404: 
+I, [2015-11-03T13:51:09.201390 #1899]  INFO -- default-ubuntu-1404:   1) webserver::default displays the home page
+I, [2015-11-03T13:51:09.201601 #1899]  INFO -- default-ubuntu-1404:      [31mFailure/Error: expect(command("wget http://localhost").exit_status).to eq 0[0m
+I, [2015-11-03T13:51:09.201827 #1899]  INFO -- default-ubuntu-1404:      [31m  [0m
+I, [2015-11-03T13:51:09.202045 #1899]  INFO -- default-ubuntu-1404:      [31m  expected: 0[0m
+I, [2015-11-03T13:51:09.202238 #1899]  INFO -- default-ubuntu-1404:      [31m       got: 4[0m
+I, [2015-11-03T13:51:09.202462 #1899]  INFO -- default-ubuntu-1404:      [31m  [0m
+I, [2015-11-03T13:51:09.202840 #1899]  INFO -- default-ubuntu-1404:      [31m  (compared using ==)[0m
+I, [2015-11-03T13:51:09.203394 #1899]  INFO -- default-ubuntu-1404:      [31m  /bin/sh -c wget\ http://localhost[0m
+I, [2015-11-03T13:51:09.203715 #1899]  INFO -- default-ubuntu-1404:      [31m  [0m
+I, [2015-11-03T13:51:09.203922 #1899]  INFO -- default-ubuntu-1404:      [36m# /tmp/verifier/suites/serverspec/default_spec.rb:6:in `block (2 levels) in <top (required)>'[0m
+I, [2015-11-03T13:51:09.204589 #1899]  INFO -- default-ubuntu-1404: 
+I, [2015-11-03T13:51:09.204619 #1899]  INFO -- default-ubuntu-1404:   2) webserver::default it installs apache
+I, [2015-11-03T13:51:09.204635 #1899]  INFO -- default-ubuntu-1404:      [31mFailure/Error: expect(package apache2).to be_installed[0m
+I, [2015-11-03T13:51:09.204649 #1899]  INFO -- default-ubuntu-1404:      [31mNameError:[0m
+I, [2015-11-03T13:51:09.204661 #1899]  INFO -- default-ubuntu-1404:      [31m  undefined local variable or method `apache2' for #<RSpec::ExampleGroups::WebserverDefault:0x00000002cd4248>[0m
+I, [2015-11-03T13:51:09.204674 #1899]  INFO -- default-ubuntu-1404:      [31m  [0m
+I, [2015-11-03T13:51:09.204685 #1899]  INFO -- default-ubuntu-1404:      [36m# /tmp/verifier/suites/serverspec/default_spec.rb:10:in `block (2 levels) in <top (required)>'[0m
+I, [2015-11-03T13:51:09.204728 #1899]  INFO -- default-ubuntu-1404: 
+I, [2015-11-03T13:51:09.204937 #1899]  INFO -- default-ubuntu-1404: Finished in 0.09167 seconds (files took 0.27729 seconds to load)
+I, [2015-11-03T13:51:09.208835 #1899]  INFO -- default-ubuntu-1404: [31m2 examples, 2 failures[0m
+I, [2015-11-03T13:51:09.208900 #1899]  INFO -- default-ubuntu-1404: 
+I, [2015-11-03T13:51:09.208922 #1899]  INFO -- default-ubuntu-1404: Failed examples:
+I, [2015-11-03T13:51:09.208937 #1899]  INFO -- default-ubuntu-1404: 
+I, [2015-11-03T13:51:09.208952 #1899]  INFO -- default-ubuntu-1404: [31mrspec /tmp/verifier/suites/serverspec/default_spec.rb:5[0m [36m# webserver::default displays the home page[0m
+I, [2015-11-03T13:51:09.208967 #1899]  INFO -- default-ubuntu-1404: [31mrspec /tmp/verifier/suites/serverspec/default_spec.rb:9[0m [36m# webserver::default it installs apache[0m
+I, [2015-11-03T13:51:09.208989 #1899]  INFO -- default-ubuntu-1404: 
+I, [2015-11-03T13:51:09.217066 #1899]  INFO -- default-ubuntu-1404: /opt/chef/embedded/bin/ruby -I/tmp/verifier/suites/serverspec -I/tmp/verifier/gems/gems/rspec-support-3.3.0/lib:/tmp/verifier/gems/gems/rspec-core-3.3.2/lib /opt/chef/embedded/bin/rspec --pattern /tmp/verifier/suites/serverspec/\*\*/\*_spec.rb --color --format documentation --default-path /tmp/verifier/suites/serverspec failed
+I, [2015-11-03T13:51:09.222046 #1899]  INFO -- default-ubuntu-1404: !!!!!! Ruby Script [/tmp/verifier/gems/gems/busser-serverspec-0.5.7/lib/busser/runner_plugin/../serverspec/runner.rb /tmp/verifier/suites/serverspec] exit code was 1
+E, [2015-11-03T13:51:09.232995 #1899] ERROR -- default-ubuntu-1404: Verify failed on instance <default-ubuntu-1404>.
+E, [2015-11-03T13:51:09.233114 #1899] ERROR -- default-ubuntu-1404: ------Exception-------
+E, [2015-11-03T13:51:09.233132 #1899] ERROR -- default-ubuntu-1404: Class: Kitchen::ActionFailed
+E, [2015-11-03T13:51:09.233144 #1899] ERROR -- default-ubuntu-1404: Message: SSH exited (1) for command: [sh -c '
+
+BUSSER_ROOT="/tmp/verifier"; export BUSSER_ROOT
+GEM_HOME="/tmp/verifier/gems"; export GEM_HOME
+GEM_PATH="/tmp/verifier/gems"; export GEM_PATH
+GEM_CACHE="/tmp/verifier/gems/cache"; export GEM_CACHE
+
+sudo -E /tmp/verifier/bin/busser test
+']
+E, [2015-11-03T13:51:09.233154 #1899] ERROR -- default-ubuntu-1404: ---Nested Exception---
+E, [2015-11-03T13:51:09.233164 #1899] ERROR -- default-ubuntu-1404: Class: Kitchen::Transport::SshFailed
+E, [2015-11-03T13:51:09.233173 #1899] ERROR -- default-ubuntu-1404: Message: SSH exited (1) for command: [sh -c '
+
+BUSSER_ROOT="/tmp/verifier"; export BUSSER_ROOT
+GEM_HOME="/tmp/verifier/gems"; export GEM_HOME
+GEM_PATH="/tmp/verifier/gems"; export GEM_PATH
+GEM_CACHE="/tmp/verifier/gems/cache"; export GEM_CACHE
+
+sudo -E /tmp/verifier/bin/busser test
+']
+E, [2015-11-03T13:51:09.233183 #1899] ERROR -- default-ubuntu-1404: ------Backtrace-------
+E, [2015-11-03T13:51:09.233192 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/verifier/base.rb:79:in `rescue in call'
+E, [2015-11-03T13:51:09.233202 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/verifier/base.rb:82:in `call'
+E, [2015-11-03T13:51:09.233212 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:398:in `block in verify_action'
+E, [2015-11-03T13:51:09.233221 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:488:in `call'
+E, [2015-11-03T13:51:09.233231 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:488:in `synchronize_or_call'
+E, [2015-11-03T13:51:09.233240 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:453:in `block in action'
+E, [2015-11-03T13:51:09.233249 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2015-11-03T13:51:09.233259 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:452:in `action'
+E, [2015-11-03T13:51:09.233268 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:394:in `verify_action'
+E, [2015-11-03T13:51:09.233298 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:341:in `block in transition_to'
+E, [2015-11-03T13:51:09.233311 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:340:in `each'
+E, [2015-11-03T13:51:09.233321 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:340:in `transition_to'
+E, [2015-11-03T13:51:09.233330 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/instance.rb:160:in `verify'
+E, [2015-11-03T13:51:09.233340 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/command.rb:176:in `public_send'
+E, [2015-11-03T13:51:09.233349 #1899] ERROR -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.4.2/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2015-11-03T13:51:09.233387 #1899] ERROR -- default-ubuntu-1404: ----------------------
