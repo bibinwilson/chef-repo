@@ -1,0 +1,10 @@
+I, [2015-11-03T12:41:29.280294 #1270]  INFO -- default-ubuntu-1404: -----> Creating <default-ubuntu-1404>...
+I, [2015-11-03T12:41:29.286605 #1270]  INFO -- default-ubuntu-1404: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/mixlib-shellout-2.2.1/lib/mixlib/shellout/unix.rb:338: warning: Insecure world writable dir /usr/local in PATH, mode 040777
+I, [2015-11-03T12:41:29.440344 #1270]  INFO -- default-ubuntu-1404: /opt/vagrant/bin/../embedded/gems/gems/vagrant-1.7.2/lib/vagrant/pre-rubygems.rb:31: warning: Insecure world writable dir /usr/local in PATH, mode 040777
+I, [2015-11-03T12:41:29.761658 #1270]  INFO -- default-ubuntu-1404: /opt/vagrant/embedded/gems/gems/bundler-1.7.11/lib/bundler/runtime.rb:222: warning: Insecure world writable dir /usr/local in PATH, mode 040777
+I, [2015-11-03T12:41:30.388496 #1270]  INFO -- default-ubuntu-1404: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2015-11-03T12:41:30.549603 #1270]  INFO -- default-ubuntu-1404: ==> default: Box 'opscode-ubuntu-14.04' could not be found. Attempting to find and install...
+I, [2015-11-03T12:41:30.549751 #1270]  INFO -- default-ubuntu-1404:     default: Box Provider: virtualbox
+I, [2015-11-03T12:41:30.549873 #1270]  INFO -- default-ubuntu-1404:     default: Box Version: >= 0
+I, [2015-11-03T12:41:34.575999 #1270]  INFO -- default-ubuntu-1404: ==> default: Adding box 'opscode-ubuntu-14.04' (v0) for provider: virtualbox
+I, [2015-11-03T12:41:34.581614 #1270]  INFO -- default-ubuntu-1404:     default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-14.04_chef-provisionerless.box
